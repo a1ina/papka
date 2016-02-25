@@ -1,0 +1,15 @@
+li:before {
+    content: '';
+    position: relative;
+    width: 10px;
+    height: 10px;
+    top: 17px;
+    right: 22px;
+    z-index: 99;
+    display: block;
+    background: #e1e1e1;
+	-webkit-transform: rotate(-45deg); /* Chrome y Safari */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); /* Internet Explorer */
+    -o-transform: rotate(-45deg); /* Opera */
+}
