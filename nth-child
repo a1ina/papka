@@ -1,0 +1,19 @@
+.footer-wrapper .container .col-xs-4:last-child form>p{
+    margin: 0px;
+    margin-top: 12px;
+}
+.footer-wrapper .container .col-xs-4:last-child h5{
+        position: initial;
+    margin-top: 60px;
+    margin-left: 0px;
+}
+.footer-wrapper .container .col-xs-4:last-child input[type='submit'] {
+    margin: 0 auto;
+    display: block;
+    margin-top: 20px;
+}
+.footer-wrapper .container .col-xs-4:last-child input:not([type='submit']) {
+   width: 250px;
+}
+
+.footer-wrapper .wpcf7-form>p:nth-child(2), .footer-wrapper .wpcf7-form>p:nth-child(3)
