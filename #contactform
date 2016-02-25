@@ -1,0 +1,21 @@
+ 
+ 
+ $( "#wpadminbar" ).insertBefore( $( "body>#page" ) );
+    if( $("body").hasClass("home") ) { 
+    $("html").attr("style", "margin: 0px !important;");
+        $(".teloo #contactform>*").wrapAll("<span class='pool'></span>");
+    }
+    
+    #contactform {
+    display: block;
+    top: -460px;
+    position: absolute;
+	width: 322px;
+	height: 341px;
+	margin-top: 84px;
+	z-index: 888; /* z-index должен быть больше, чем у Google Maps */
+	padding: 10px;
+	background: rgba(255,255,255,0.6);
+	 /* Устанавливаем прозрачность у Google Form */
+	color: white;
+}
