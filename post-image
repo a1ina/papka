@@ -1,0 +1,2 @@
+достает картинки постов 
+<?php echo the_post_thumbnail();?>
