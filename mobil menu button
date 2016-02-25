@@ -1,0 +1,12 @@
+мобильное меню, кнопка 
+
+(function($){
+$(".button_menu").click(function(){
+    $(".main-navigation").fadeToggle();
+});
+
+
+html  <span class="button_menu"></span>
+
+.button_menu{display: block;width: 20px;
+height:18px; background:url(/wp-content/uploads/2016/02/menu-2.png); float: right; position: relative; z-index: 10;top: 30px;}
