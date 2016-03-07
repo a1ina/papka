@@ -34,3 +34,137 @@ add_action( 'widgets_init', 'evanston_widgets_init' );
   
   <nav id="footer-navigation" class="menu_footer" role="navigation">
              <?php  dynamic_sidebar( 'footer-1' );  ?></nav>
+             
+             
+             
+             
+             .site-footer nav{
+    text-align: left;
+    padding-top: 0px;
+}
+.site-footer .menu_footer{
+    clear: both;
+    display: block;
+    list-style-type: none;
+    
+}
+.site-footer .menu_footer ul {
+   font-size: 16px;
+    list-style-type: none;
+    margin: 0px 0 0 26px;
+    padding: 0px;
+}
+
+.site-footer .menu_footer ul li a{
+    font-size: 16px;
+	color: White; 
+	text-decoration: none; 
+	
+	height: 30px;
+	display: block;
+	border: none;
+    
+}
+.site-footer .menu_footer ul li{
+   padding-bottom: 10px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid #ebebeb;
+}
+.site-footer .menu_footer ul li a:hover{
+	width: 400px;
+	height: 30px;
+	color: #e2e2e2;
+    font-size: 16px;
+    text-decoration: none;
+   
+}
+
+.site-footer .menu_footer ul li a span{
+	font-size: 18px; 
+	display: block;	
+   
+}
+ .site-footer .menu_footer ul li a:before {
+    content: '';
+    position: relative;
+    width: 10px;
+    height: 10px;
+    top: 17px;
+    right: 22px;
+    z-index: 99;
+    display: block;
+    background: #e1e1e1;
+	-webkit-transform: rotate(-45deg); /* Chrome y Safari */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); /* Internet Explorer */
+    -o-transform: rotate(-45deg); /* Opera */
+}
+
+.recent-posts{
+    margin-top: 40px;
+    color:white;
+    font-weight: 600;
+}
+
+.site-footer .footer-post-menu nav{
+    text-align: left;
+    padding-top: 0px;
+}
+.site-footer .footer-post-menu{
+    clear: both;
+    display: block;
+    list-style-type: none;
+    
+}
+.site-footer .footer-post-menu ul {
+   font-size: 14px;
+    color: white;
+    list-style-type: none;
+    margin: 0px 0 0 26px;
+    padding: 0px;
+}
+
+.site-footer .footer-post-menu ul a li {
+    font-size: 12px;
+	color: White; 
+	text-decoration: none; 
+	height: 43px;
+	display: block;
+	border: none;
+    
+}
+.site-footer .footer-post-menu ul a li{
+    border-bottom: 1px solid #fff;
+}
+.site-footer .footer-post-menu ul a li:last-child{
+    
+}
+.site-footer .footer-post-menu ul li a:hover{
+	width: 400px;
+	height: 30px;
+	color: #e2e2e2;
+    font-size: 16px;
+    text-decoration: underline;
+   
+}
+
+.site-footer .footer-post-menu ul li a span{
+	font-size: 18px; 
+	display: block;	
+   
+}
+ .site-footer .footer-post-menu ul a li:before {
+    content: '';
+    position: relative;
+    width: 10px;
+    height: 10px;
+    top: 20px;
+    right: 22px;
+    z-index: 99;
+    display: block;
+    background: #e1e1e1;
+	-webkit-transform: rotate(-45deg); /* Chrome y Safari */
+    -moz-transform: rotate(-45deg); /* Firefox */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1.5); /* Internet Explorer */
+    -o-transform: rotate(-45deg); /* Opera */
+}
