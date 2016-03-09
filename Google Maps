@@ -11,7 +11,7 @@ html     <div id="googlemaps"></div>
 }
 
 <!-- Подключаем Google Maps API library  -->
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
  
 <script type="text/javascript">
    
