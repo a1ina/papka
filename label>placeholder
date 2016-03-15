@@ -1,0 +1,9 @@
+<script>
+(function ($) {
+$(".single-post input[name='author']").attr("placeholder","Name*");
+$(".single-post input[name='email']").attr("placeholder","Email*");
+$(".single-post input[name='url']").attr("placeholder","Website");
+$(".single-post textarea[name='comment']").attr("placeholder","Comment");
+
+})(jQuery);
+</script>
