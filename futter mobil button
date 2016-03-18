@@ -1,0 +1,28 @@
+<a id="footer" href="tel:">
+   <div class="zdvig">
+       <div class="footer-img">
+           <i class="fa fa-phone"></i>
+       </div></div>
+   </a>
+   
+    #footer {
+   float: right;
+    position: fixed;
+    right: 0px;
+    bottom: 10px;
+    padding: 15px;
+    background: #33d1ff;
+    color: #fff;
+    z-index: 999;
+        display: block;
+}
+    
+    .footer-img {
+    position: relative;
+    top: 1px;
+}
+  
+    #footer .zdvig .footer-img i{
+        font-size: 28px;
+        color:white;
+    }
