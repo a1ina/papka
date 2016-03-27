@@ -5,6 +5,16 @@
        </div></div>
    </a>
    
+ <script>
+jQuery(function(f){
+    var element = f('#footer');
+    f(window).scroll(function(){
+        element['fade'+ (f(this).scrollTop() > 200 ? 'In': 'Out')](500);           
+    });
+}); 
+</script>  
+   
+   
     #footer {
    float: right;
     position: fixed;
