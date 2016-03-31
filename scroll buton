@@ -1,0 +1,42 @@
+ <a href="#" class="scrollup">
+           <i class="fa fa-chevron-up"></i>
+       </a> 
+       
+       <script type="text/javascript">
+$(document).ready(function(){
+ 
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+$('.scrollup').fadeIn();
+} else {
+$('.scrollup').fadeOut();
+}
+});
+ 
+$('.scrollup').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+ 
+});
+</script>
+
+
+.scrollup{
+width: 40px;
+    height: 40px;
+    opacity: 0.9;
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    display: none;
+    z-index: 99999999;
+    background: #fff;
+    border-radius: 50%;
+     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.scrollup i{
+        color: #92b236;
+    font-size: 20px;
+    padding: 8px 10px;
+}
