@@ -1,0 +1,5 @@
+<script>
+  $(document).ready(function(){
+    $("a.bread-custom-post-type-portfolio").attr("href", function() {return "/projects/"});
+  })(jQuery);
+  </script>
