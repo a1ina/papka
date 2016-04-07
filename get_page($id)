@@ -1,0 +1,5 @@
+<?php
+$id = ID#;
+$p = get_page($id);
+echo apply_filters('the_content', $p->post_content);
+?>
