@@ -1,0 +1,104 @@
+<!--<script src="/wp-content/themes/topname/jquery.bxslider/jquery.bxslider.min.js"></script>
+<script src="/wp-content/themes/topname/jquery.bxslider/jquery.bxslider.js"></script>
+<script src="/wp-content/themes/topname/jquery.bxslider/plugins/jquery.fitvids.js"></script>
+<link rel="stylesheet" href="/wp-content/themes/topname/jquery.bxslider/jquery.bxslider.css">
+
+
+
+<ul class="bxslider">
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /><a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a class="fancybox-thumb"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+</ul>
+
+<div id="bx-pager">
+ 
+  <a rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="0" href="/wp-content/uploads/2016/03/b-1.jpg"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="1" href="/wp-content/uploads/2016/04/Open-project.jpg"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="2" href="/wp-content/uploads/2016/03/b-1.jpg"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="3" href="/wp-content/uploads/2016/04/Open-project.jpg"><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="4" href="/wp-content/uploads/2016/03/b-1.jpg"><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="5" href=""><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="6" href=""><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  <a rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="7" href=""><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  <a rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="8" href=""><img src="/wp-content/uploads/2016/03/b-1.jpg" /></a>
+  <a  rel="fancybox-thumb" data-fancybox-group="gallery" data-slide-index="9" href=""><img src="/wp-content/uploads/2016/04/Open-project.jpg" /></a>
+  
+</div>
+<style>
+    #bx-pager img{
+        height: 200px;
+        widows: 200px;
+        
+    }
+</style>
+<script>
+ jQuery(document).ready(function() {
+    jQuery('.bxslider').bxSlider({
+      pagerCustom: '#bx-pager',
+      maxSlides: 5,
+       
+  
+  });
+  jQuery(document).ready(function() {
+       jQuery('#bx-pager').bxSlider({
+            slidesToShow: 5,
+            slidesToScroll: 1,
+           vertical : true
+       })
+  });
+  jQuery('.fancybox-thumb').fancybox({
+    prevEffect : 'none',
+    nextEffect : 'none',
+    minWidth: '380px',
+    minHeight: '500px',
+    arrows: true,
+    closeClick: true,
+    mouseWheel: false,
+    afterShow: function(){
+ jQuery('.fancybox-thumb').show();
+},
+    afterClose: function(){
+ jQuery('.fancybox-thumb').show();
+},
+    helpers : {
+      thumbs: {
+        width: 50,
+        height: 50
+          
+      },
+      overlay : {
+          locked : false
+        },
+      source  : function(current) {
+        return $(current.element).data('thumbnail');
+      }
+    }
+
+  });
+  });
+</script>
+-->
