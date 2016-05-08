@@ -1,0 +1,39 @@
+<div class="container waze-container">
+  <div class="vc_col-xs-6 waz">
+    <a class="makeitso" href="waze://?ll=32.77191,35.01376&amp;navigate=yes"><img src="/wp-content/uploads/2016/05/wazen.png" alt="waze"></a>
+  </div>
+  <div class="vc_col-xs-6"><a href="tel:054-819-0031"><i class="fa fa-phone"></i></a></div>
+</div>
+
+.waze-container {
+  bottom: 0px;
+  display:none;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 !important;
+  position: fixed !important;
+  width: 100%;
+}
+.waze-container > div {
+  background-color: #92b236;
+  float: left;
+  height: 100%;
+  text-align: center;
+  width: 50%;
+}
+.waze-container > div:first-child {
+  background: #88c2ff;;
+}
+.waz a img {
+  max-height: 40px;
+}
+.waze-container > div:nth-child(2) i {
+  font-size: 43px;
+  padding-top: 5px;
+  color: #fff;
+  transform: rotate(270deg);
+}
+
+@media screen and (max-width:480px){
+.waze-container {display: block;z-index: 1000;}
+}
