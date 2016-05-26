@@ -1,0 +1,29 @@
+<p>Your Name (required)<br />
+    [text* your-name] </p>
+
+<p>Your Email (required)<br />
+    [email* your-email] </p>
+
+<p>Subject<br />
+    [text your-subject] </p>
+
+<p>Your Message<br />
+    [textarea your-message] </p>
+
+<p>[submit "Send"]</p>
+
+
+
+<p><br />
+    [email* your-email placeholder "מייל" ] </p>
+
+<p><br />
+    [text* your-name placeholder "שם"] </p>
+
+<p><br />
+    [text* your-name placeholder "הנדון"] </p>
+
+<p><br />
+    [textarea your-message placeholder "הודעה" ] </p>
+
+<p>[submit "שלח"]</p>
