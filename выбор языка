@@ -1,0 +1,17 @@
+<?php
+$lang=get_locale();
+switch($lang){
+ case 'en_US':
+       echo '<h3>Flower arrangements</h3>';
+   break;
+ case 'ru_RU':
+       echo '<h3>Цветочные композиции</h3>';
+   break;
+ case 'il_IL':
+     echo '<h3>סידורי פרחים</h3>';
+   break;
+  default:
+      echo '<h3>סידורי פרחים</h3>';
+  break;
+}
+?>
