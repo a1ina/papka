@@ -1,0 +1,7 @@
+//clearform contact us
+        $('.clear-form').on('click', function(){
+           $('input[type="text"], input[type="email"], textarea').val('');
+        });
+        
+        
+        <div class="clear-r"><a href="#" class="clear-form" rel="nofollow">ברור</a></div>
