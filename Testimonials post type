@@ -1,0 +1,73 @@
+//add Testimonials post type
+if( ! function_exists( 'testimonials_post_types' ) ) {
+  function testimonials_post_types() {
+    register_post_type(
+      'testimonials',
+      array(
+        'labels' => array(
+          'name' => __( 'Testimonials ', 'testimonials' ),
+          'singular_name' => __( 'Testimonials', 'testimonials' ),
+          'add_new' => __( 'Add New', 'testimonials' ),
+          'add_new_item'  => __( 'Add New Testimonials', 'testimonials' ),
+          'edit' => __( 'Edit', 'testimonials' ),
+          'edit_item' => __( 'Edit Testimonials', 'testimonials' ),
+          'new_item' => __( 'New Testimonials', 'testimonials' ),
+          'view' => __( 'View Testimonials', 'testimonials' ),
+          'view_item' => __( 'View Testimonials', 'testimonials' ),
+          'search_items' => __( 'Search Testimonials', 'testimonials' ),
+          'not_found' => __( 'No Testimonials found', 'testimonials' ),
+          'not_found_in_trash' => __( 'No Testimonials found in Trash', 'testimonials' ),
+          'parent' => __( 'Parent Testimonials', 'testimonials' ),
+        ),
+        'description' => __( 'Create a Testimonials.', 'testimonials' ),
+        'public' => true,
+        'show_ui' => true,
+        'show_in_menu' => true,
+        'publicly_queryable' => true,
+        'exclude_from_search' => true,
+        'menu_position' => 5,
+        'hierarchical' => true,
+        'query_var' => true,
+        'menu_icon' => 'dashicons-megaphone',
+        'supports' => array (
+          'title', //Text input field to create a post title.
+          'editor',
+          'thumbnail',
+          'revisions'
+        )
+      )
+    );
+    register_taxonomy('testimonials_category', 'testimonials', array(
+      'hierarchical' => true,
+      'label' => 'Testimonials Categories',
+      'singular_name' => 'Category',
+      'rewrite' => true,
+      'query_var' => true
+    ));
+  }
+}
+add_action( 'init', 'testimonials_post_types' );
+
+
+
+<?php
+$targs = array( 
+      'post_type' => 'testimonials',
+      'posts_per_page' => 50,
+      'post_status' => 'publish',
+      'ignore_sticky_posts' => true 
+    );
+
+$testimonials = new WP_Query( $targs );
+
+if ( $testimonials->have_posts() ) {
+ while ( $testimonials->have_posts() ) {
+  $testimonials->the_post(); ?>
+    <div class="review-item carousel-item">
+    <?php echo the_content(); ?>
+    </div>
+    <?php
+ }
+}
+wp_reset_postdata();
+?>
