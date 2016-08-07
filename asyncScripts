@@ -1,0 +1,9 @@
+<script type="text/javascript">
+		var asyncScripts = [];
+		var asyncFunctions = [];
+		var loadedScripts = [];
+		var scriptsToLoad = 0;
+		function execOnReady(func){
+			asyncFunctions.push(func);
+		}
+	</script>
