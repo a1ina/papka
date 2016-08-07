@@ -1,0 +1,48 @@
+//полоска бегующая в меню
+       $( window ).load(function() {
+        $(".menu-menu-1-container>ul").append("<span class='ecto'></span>");});
+        
+        
+        
+        
+
+.ecto:hover {
+    -moz-transition-duration: 3000s;
+    -ms-transition-duration: 3000s;
+    -o-transition-duration: 3000s;
+    -webkit-transition-duration: 3000s;
+    transition-duration: 3000s;
+}
+.menu li:nth-child(1):hover ~ .ecto {
+    right: 66px;
+}
+.menu li:nth-child(2):hover ~ .ecto {
+       right: 170px;
+}
+.menu li:nth-child(3):hover ~ .ecto {
+       right: 260px;
+}
+.menu li:nth-child(4):hover ~ .ecto {
+        right: 353px;
+}
+.menu li:nth-child(5):hover ~ .ecto {
+        right: 450px;
+}
+.menu li:nth-child(6):hover ~ .ecto {
+       right: 553px;
+}
+.page-id-15 .ecto {
+        right: 170px;
+}
+.page-id-13 .ecto {
+        right:260px;
+}
+.page-id-11 .ecto {
+        right: 353px;
+}
+.page-id-7 .ecto {
+        right: 450px;
+}
+.page-id-9 .ecto {
+        right: 553px;
+}
