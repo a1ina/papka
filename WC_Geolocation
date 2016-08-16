@@ -1,0 +1,14 @@
+<?php 
+    $pd = WC_Geolocation::geolocate_ip();
+global $WOOCS;
+            if (isset($pd['country']) AND ! empty($pd['country']))
+            {
+                if ('US' == $pd['country'])
+			{
+				$WOOCS->current_currency='USD';
+                                $WOOCS->storage->set_val('woocs_current_currency', 'USD');
+
+			}
+
+            }
+    ?>
