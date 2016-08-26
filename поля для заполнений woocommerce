@@ -1,0 +1,66 @@
+// checkout page
+add_filter("woocommerce_checkout_fields", "ck_order_fields");
+
+function ck_order_fields($fields) {
+
+    $order = array(
+        "billing_first_name", 
+        "billing_last_name",
+        "billing_email", 
+        "billing_phone",
+        "billing_country",
+        "billing_state",
+        "billing_city",
+        "billing_address_1"
+        
+
+    );
+    foreach($order as $field)
+    {
+        $ordered_fields[$field] = $fields["billing"][$field];
+    }
+
+    $fields["billing"] = $ordered_fields;
+    return $fields;
+
+}
+
+
+// checkout page
+add_filter("woocommerce_checkout_fields", "ck_order_fields_shipping");
+
+function ck_order_fields_shipping($fields) {
+
+    $order = array(
+        "shipping_first_name", 
+        "shipping_last_name",
+        "shipping_company",
+        "shipping_address_1",
+        "shipping_address_2_field",
+        "shipping_city",
+        "shipping_state",
+        "shipping_date",
+        "shipping_wishes",
+        "shipping_wish"
+        
+
+    );
+    foreach($order as $field)
+    {
+        $ordered_fields[$field] = $fields["shipping"][$field];
+    }
+
+    $fields["shipping"] = $ordered_fields;
+    return $fields;
+
+}
+
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+
+// Our hooked in function - $fields is passed via the filter!
+function custom_override_checkout_fields( $fields ) {
+     $fields['shipping']['shipping_company']['placeholder'] = 'טלפון';
+     $fields['shipping']['shipping_company']['label'] = 'טלפון מקבל ההזמנה';
+	$fields['shipping']['shipping_date'] = array(    'label'     => __('תאריך המשלוח', 'woocommerce'),    'placeholder'   => _x('תאריך', 'placeholder', 'woocommerce'),    'required'  => false,    'class'     => array('form-row-wide'),    'clear'     => true     );	 	$fields['shipping']['shipping_wishes'] = array(    'label'     => __('טווח שעות למסירת המשלוח', 'woocommerce'),    'placeholder'   => _x('שעה מועדפת?', 'placeholder', 'woocommerce'),    'required'  => false,    'class'     => array('form-row-wide'),    'clear'     => true     );	 	$fields['shipping']['shipping_wish'] = array(    'label'     => __('רוצים להוסיף ברכה?', 'woocommerce'),    'placeholder'   => _x('מה תרצו לכתוב?', 'placeholder', 'woocommerce'),    'required'  => false,    'class'     => array('form-row-wide'),    'clear'     => true     );  unset($fields['shipping']['shipping_postcode']);   return $fields;
+}
