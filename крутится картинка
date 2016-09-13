@@ -2,3 +2,12 @@ webkit-animation: transform-rotate 15000ms ease 0ms infinite reverse;
     -moz-animation: transform-rotate 15000ms ease 0ms infinite reverse;
     -ms-animation: transform-rotate 15000ms ease 0ms infinite reverse;
     animation: transform-rotate 15000ms ease 0ms infinite reverse;
+
+
+
+
+
+-webkit-animation: transform-rotate 10000ms ease 0ms infinite normal;
+    -moz-animation: transform-rotate 10000ms ease 0ms infinite normal;
+    -ms-animation: transform-rotate 10000ms ease 0ms infinite normal;
+    animation: transform-rotate 10000ms ease 0ms infinite normal;
