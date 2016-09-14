@@ -1,0 +1,14 @@
+ /*click sub-menu*/
+  $(document).on('click', '.menu-item-has-children > a', function(e) {
+    if ($(this).parent('li').is('.open-active')) {
+      $(this).parent('li').removeClass('open-active');
+      $(this).click();
+    } else {
+      e.preventDefault();
+      $(this).parent('li').addClass('open-active').hover();
+      $(this).hover();
+    }
+  });
+  
+  .main-navigation .sub-menu{display: none;}
+  .main-navigation .open-active .sub-menu{display: block;}
