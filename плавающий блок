@@ -1,0 +1,8 @@
+  var offset = $(".cont-category").offset();
+		var topPadding = 15;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > offset.top) {
+				$(".cont-category").stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+			}
+			else {$(".cont-category").stop().animate({marginTop: 0});};});
+    
