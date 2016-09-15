@@ -6,3 +6,28 @@
 			}
 			else {$(".cont-category").stop().animate({marginTop: 0});};});
     
+    
+    
+    
+     var offset = $(".cont-category").offset();
+  var topPadding = 15;
+  $(window).scroll(function() {
+   if ($(window).scrollTop() > offset.top) {
+    $(".cont-category").stop().animate({marginTop: $(window).scrollTop() - offset.top + topPadding});
+   }
+   else {$(".cont-category").stop().animate({marginTop: 0});};});
+   
+   
+   
+   
+     var offset = $(".cont-category").offset();
+		var topPadding = 15;
+		$(window).scroll(function() {
+			if ($(window).scrollTop() > offset.top) {
+				$(".cont-category").stop().css({marginTop: $(window).scrollTop() - offset.top + topPadding});
+			}
+			else {$(".cont-category").stop().css("marginTop", "0")
+            ;};
+        });
+        
+        .cont-category{transition: all .2s ease;}
