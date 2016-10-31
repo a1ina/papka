@@ -1,1 +1,2 @@
  if (window.innerWidth > 1023 && window.innerWidth < 1599) {}
+ if($(window).innerWidth() < 640) {}
