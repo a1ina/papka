@@ -1,0 +1,8 @@
+if($(window).innerWidth() < 640) {
+    $('.page-id-2187 .gallery .gallery-filter li').click(function() {
+        $('html, body').animate({
+            scrollTop: $(".gallery-items-container").offset().top
+        }, 
+                                1000);
+    });
+}
