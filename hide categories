@@ -1,0 +1,30 @@
+//======================================================
+function callback($buffer) {
+  // modify buffer here, and then return the updated code
+  //$buffer = preg_replace('~(<(.*)[^<>]*>\s*<\/\\2>)~i','',$buffer); // регулярка убирает пустые закрытые теги <p></p>, <b></b> и т.д.
+  $buffer = str_replace("Добавить в корзину", "В корзину", $buffer);
+  $buffer = str_replace("₴", "грн", $buffer);
+  //$buffer = str_replace("  </p>", "", $buffer);
+  $buffer = str_replace("</p>", "", $buffer);
+  $buffer = str_replace('ДЕТАЛИ ОПЛАТЫ', "ДЕТАЛИ ЗАКАЗА", $buffer);
+
+ 
+ $buffer = str_replace('<li><a href="http://rest.u.org.ua/blog/category/%d1%81%d0%bb%d0%b0%d0%b9%d0%b4%d0%b5%d1%80/" rel="category tag">Слайдер</a></li>', "", $buffer);
+  
+$buffer = str_replace("{/div}", "</div>", $buffer);
+
+  
+  return $buffer;
+}
+
+function buffer_start() { ob_start("callback"); }
+
+function buffer_end() { ob_end_flush(); }
+
+//add_action('wp_head', 'buffer_start');
+//add_action('wp_footer', 'buffer_end');
+
+add_action('after_setup_theme', 'buffer_start');
+add_action('shutdown', 'buffer_end');
+
+//------------------------------------------------------------
