@@ -27,7 +27,8 @@ html     <div id="googlemaps"></div>
     streetViewControl: false, // hide the yellow Street View pegman
     scaleControl: true, // allow users to zoom the Google Map
     mapTypeId: google.maps.MapTypeId.ROADMAP,
-    center: latLng
+    center: latLng,
+    scrollwheel: false
   };
    
   map = new google.maps.Map(document.getElementById('googlemaps'),
