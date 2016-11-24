@@ -1,0 +1,9 @@
+width: 100vw;
+    height: 100vh;
+    
+    
+      <script>
+      ScreenWidth = screen.width;     
+      ScreenHeight = screen.height;     
+      alert(ScreenWidth+'x'+ScreenHeight);
+    </script>
