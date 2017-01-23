@@ -1,0 +1,23 @@
+jQuery(document).ready(function(){
+    
+  	jQuery(window).scroll(function(){
+      if (jQuery(this).scrollTop() > 100) {
+         jQuery('.menu_h').addClass('fixed');
+         jQuery('.menu_h .row-fluid').addClass('container');
+      } else {
+          jQuery('.menu_h').removeClass('fixed');
+      }
+    }); 
+    });
+    
+    .fixed {
+    position: fixed !important;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    -moz-box-shadow: 5px 5px 20px #333;
+    -webkit-box-shadow: 5px 5px 20px #333;
+    box-shadow: 5px 5px 20px #333;
+    z-index: 9999;
+}
