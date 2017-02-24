@@ -1,3 +1,12 @@
+<div class="finance_fact_item row">
+		<div class="icon_holder col-lg-2 col-md-2 col-sm-3 col-xs-2"><span class="icon flaticon-price8"></span></div>
+		<div class="finance_fact_name col-lg-7 col-md-7 col-sm-7 col-xs-6">
+			<h6>active cash</h6>
+			<span>бонус на торговый счет</span></div>
+		<div class="col-lg-3 col-md-3 col-sm-2 col-xs-4 count">
+			<p class="stat-count">100</p>
+		</div>
+	</div>
 от 0 к числу
 jQuery(function($){	
     
@@ -40,4 +49,26 @@ jQuery(function($){
 		$(this).html('1000');
 	   count1($(this));
     });
-});	
+});
+
+
+
+
+
+jQuery(function($){	
+    
+    function count1($this){
+        var current1 = parseInt($this.html(), 10);
+        current1 = current1 ;
+        $this.html(--current1);
+        if(current1 > 0){            
+            setTimeout(function(){count1($this)}, 10);            
+        }
+  
+    }        
+    $(".stat-count1").each(function() {
+		$(this).data('count1', parseInt($(this).html(), 0));
+		$(this).html('1000');
+	   count1($(this));
+    });
+});
