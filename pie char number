@@ -1,3 +1,4 @@
+от 0 к числу
 jQuery(function($){	
     
 function count1($this){
@@ -16,4 +17,27 @@ function count1($this){
 		$(this).html('0');
 	count1($(this));
 });
+});	
+
+
+от числа к 0
+jQuery(function($){	
+    
+    function count1($this){
+        var current1 = parseInt($this.html(), 10);
+        current1 = current1 ;
+        $this.html(--current1);
+        if(current1 > 1000){
+            $this.html($this.data('count1'));
+        }else{ 
+            if(current1 > 0){
+                setTimeout(function(){count1($this)}, 10);
+            }
+        }
+    }        
+    $(".stat-count1").each(function() {
+		$(this).data('count1', parseInt($(this).html(), 0));
+		$(this).html('1000');
+	   count1($(this));
+    });
 });	
