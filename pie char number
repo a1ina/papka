@@ -1,0 +1,19 @@
+jQuery(function($){	
+    
+function count1($this){
+	var current1 = parseInt($this.html(), 10);
+	current1 = current1 + 10;
+		$this.html(--current1);
+			if(current1 > $this.data('count1')){
+		$this.html($this.data('count1'));
+		} 
+		else {    
+			setTimeout(function(){count1($this)}, 100);
+		}
+		}        
+		$(".stat-count1").each(function() {
+			$(this).data('count1', parseInt($(this).html(), 0));
+		$(this).html('0');
+	count1($(this));
+});
+});	
