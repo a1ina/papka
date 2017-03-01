@@ -1,0 +1,6 @@
+var i = 0;
+function ttimer1(){
+    $('.stat-count').text(++i)
+    if (i == 100) clearInterval(timerId1)    
+}
+var timerId1 = setInterval(ttimer1,50)
