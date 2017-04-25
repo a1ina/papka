@@ -1,0 +1,96 @@
+document.addEventListener('DOMContentLoaded',function(){
+	
+	let menuBox = document.getElementsByClassName('masonry-menu'),
+		vStyle = document.createElement('style'),
+		cll = [],
+		mass = [],
+		height = 0,
+		h1 = 0,
+		h2 = 0,
+		h3 = 0,
+		h4 = 0,
+		tmp, tmp2,j,
+		i = 0, 
+		o=0;
+		
+	vStyle.innerText = '.vStyle{visibility: visible; opacity: 1;display: block;} .masonry-menu{min-height: 100px;}';
+	document.head.append(vStyle);
+		
+	console.log(`${menuBox} ${menuBox.length}`)
+	
+	for(;i<menuBox.length;i++)
+	{
+		menuBox[i].classList.add('vStyle');
+		
+		for(j=0;j<menuBox[i].children.length;j++)
+		{
+			mass.push(menuBox[i].children[j].clientHeight + 15);
+			
+			menuBox[i].children[j].style.position = 'absolute';
+			menuBox[i].children[j].style.width = '250px';
+			if(j<4)
+				menuBox[i].children[j].style.left = 250 * j + 50 + 'px';
+		}
+		
+		cll.push(mass);
+		
+		mass = [];
+		
+		menuBox[i].classList.remove('vStyle');
+	}
+	
+	console.dir(cll);
+	
+	for(i=0;i<cll.length;i++)
+	{
+		for(j=4;j<cll[i].length;j++,o++)
+		{
+			if(o === 4)
+				o = 0;
+			
+			if(j<8)
+				tmp = cll[i][j-4] + 50;
+			else tmp = cll[i][j-4];
+			
+			switch(o)
+			{
+				case 1: 
+					menuBox[i].children[j].style.top = tmp  + h1 + 'px';
+					h1 += tmp; 
+					break;
+					
+				case 2:
+					menuBox[i].children[j].style.top = tmp  + h2 + 'px';
+					h2 += tmp; 
+					break;
+				case 3:
+					menuBox[i].children[j].style.top = tmp  + h3 + 'px';
+					h3 += tmp; 
+					break;
+				case 0: 
+					menuBox[i].children[j].style.top = tmp  + h4 + 'px';
+					h4 += tmp;
+					break;
+			}
+			menuBox[i].children[j].style.left = o * 250 + 50 + 'px';
+		}
+		
+		h1 += tmp = cll[i][j-4];
+		h2 += tmp = cll[i][j-3];
+		h3 += tmp = cll[i][j-2];
+		h4 += tmp = cll[i][j-1];
+		
+		tmp2 = [h1,h2,h3,h4];
+		
+		tmp  = 0;
+		
+		for(j=0;j<4;j++)
+		{
+			if(tmp2[j] > tmp)
+				tmp = tmp2[j];
+		}
+		menuBox[i].style.height = tmp + 'px';
+		
+		h1 = h2 = h3 = h4 = 0;	
+	}
+});
