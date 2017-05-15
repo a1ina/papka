@@ -1,0 +1,37 @@
+<?php if(isset($_GET['start'])){ ?>
+<script>
+var mnoj = 1;
+  button.onclick = function() {
+
+      jQuery.ajax({
+        url: "/some.php",
+        type: "POST",
+        data:{'start': <?php echo $_GET['start'];?>, 'mnoj' : mnoj, 'module':'calculator', 'state':'<?php echo  $state;?>', 'category':<?php echo $category;?>},
+        success: function(data){
+     // console.log(data);
+     jQuery(data).appendTo(jQuery("#comjshop_list_product"))
+    //alert( "Прибыли данные: " + data );
+  }
+});
+  mnoj++;  
+
+  };
+</script>
+<?php } else{?>
+
+<script>
+var i = 1;
+  button.onclick = function() {
+jQuery.ajax({
+  url: "/some.php",
+  type: "POST",
+  data:{'page': i, 'module':'calculator', 'state':'<?php echo  $state;?>', 'category':<?php echo $category;?>},
+  success: function(data){
+     // console.log(data);
+     jQuery(data).appendTo(jQuery("#comjshop_list_product"))
+    //alert( "Прибыли данные: " + data );
+  }
+});
+  i++;  
+  };
+</script>
