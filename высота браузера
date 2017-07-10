@@ -21,6 +21,10 @@
     
     
     
+    if( /iPad/i.test(navigator.userAgent) ) {
+      jQuery(".scroll-but").css('bottom', '36%');
+  }
+    
 
 
 alert(document.documentElement.clientHeight)
