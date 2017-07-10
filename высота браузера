@@ -1,3 +1,7 @@
  if (document.body.clientHeight >= '925') {
         jQuery(".scroll-but").css('bottom', '6%');
     }
+
+
+
+alert(document.documentElement.clientHeight)
