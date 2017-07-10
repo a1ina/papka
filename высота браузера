@@ -4,4 +4,23 @@
 
 
 
+
+
+ if (window.screen.height >= 1080 && window.screen.height <= 1060 ) {
+        jQuery(".scroll-but").css('bottom', '6%');
+    
+    }
+    else if (window.screen.height >= 1050) {
+        jQuery(".scroll-but").css('bottom', '11%');
+          
+    }
+    else if (window.screen.height >= 768) {
+        jQuery(".scroll-but").css('bottom', '-33%');
+          
+    }
+    
+    
+    
+
+
 alert(document.documentElement.clientHeight)
