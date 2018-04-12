@@ -1,0 +1,12 @@
+ <script>
+
+                $('.closeBlock').click(function(){
+                $('.informBlock').slideUp(200);
+                $('.openBlock').fadeIn(200);
+                });
+
+                $('.openBlock').click(function(){
+                $('.informBlock').slideDown(200);
+                $('.openBlock').fadeOut(200);
+                });
+            </script>
