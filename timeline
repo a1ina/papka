@@ -1,0 +1,88 @@
+html
+
+<div class="timeline-line"><svg class="line-lg" height="423" viewBox="0 0 718 423" width="718" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(-80 -86)">
+        <path d="M-12.865,89.209H508.76c0,0,104.502-1.333,104.667,104c0.167,106.333-107.333,102.666-107.333,102.666  l-181.334,0.667c0,0-100.654-6.665-101.333,103.333c-0.667,108,96.022,106.194,96.022,106.194l535.307-2.194" fill="none" id="line-lg" stroke="#414141" stroke-width="5"></path>
+    </g>
+</svg><svg class="line-md" height="423" viewBox="0 0 435.377 423" width="435.377" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g transform="translate(0 -92)">
+        <path d="M-134.667,95.667h441.333c0,0,104.502-1.333,104.667,104C411.5,306,304,302.333,304,302.333L122.667,303   c0,0-100.654-6.665-101.333,103.333c-0.667,108,96.022,106.194,96.022,106.194l455.311-2.194" fill="none" id="line-md" stroke="#414141" stroke-width="5"></path>
+    </g>
+</svg></div>
+/*************************************************************/
+style
+
+.timeline-line {
+    text-align: center;
+    padding: 80px 0 9px;
+}
+.timeline-line .line-lg {
+    -webkit-transform: translateX(-50%) scaleX(1.08);
+    transform: translateX(-50%) scaleX(1.08);
+}
+.timeline-line .line-md {
+    display: none;
+    -webkit-transform: translateX(-50%) scaleX(1.15);
+    transform: translateX(-50%) scaleX(1.15);
+}
+/**************************************************************/
+script
+
+ $(document).ready(function () {
+        var paths = $('.timeline-line').find('svg');
+        paths.each(function(){
+            // Get a reference to the <path>
+            var path = $(this).find('path')[0];
+            // Get length of path...
+            var pathLength = path.getTotalLength();
+            // Make very long dashes (the length of the path itself)
+            path.style.strokeDasharray = pathLength + ' ' + pathLength;
+            // Offset the dashes so the it appears hidden entirely
+            path.style.strokeDashoffset = pathLength;
+            // When the page scrolls...
+            // window.addEventListener("scroll", function(e) {
+            // What % down is it?
+            var scrollSvg = function(){
+                var el = $('.timeline-block');
+                //var elTop = el.offset().top;
+                var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop-300) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)*2.4;
+                // Length to offset the dashes
+                var drawLength = pathLength * scrollPercentage;
+                // Draw in reverse
+                path.style.strokeDashoffset = pathLength - drawLength;
+                // When complete, remove the dash array, otherwise shape isn't quite sharp
+                if (scrollPercentage >= 0.99) {
+                    path.style.strokeDasharray = "none";
+                } else {
+                    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+                }
+            };
+            $(window).scroll(function(e){scrollSvg()});
+            scrollSvg();
+        });
+// var str = window.getComputedStyle(document.querySelector('p'), ':before')
+//            .getPropertyValue('content');
+        var timeline = document.querySelectorAll('.timeline')[0];
+        var line = document.querySelectorAll('.line')[0];
+        // console.log(timeline);
+        var timelineResize = function(){
+            if ( window.innerWidth < 768 ){
+                var timelineHeightPercentage = (document.documentElement.scrollTop + document.body.scrollTop-800) / (document.documentElement.scrollHeight - document.documentElement.clientHeight)*2.4;
+                // console.log(timelineHeightPercentage);
+                var timeLineHeight = timeline.clientHeight;
+                var lineHeight = timeLineHeight * timelineHeightPercentage;
+                // console.log(timeLineHeight);
+                // console.log(lineHeight);
+                $(line).css('height', lineHeight + 'px');
+            } else {
+                $(line).css('height', 0);
+            }
+        };
+        $(window).scroll(function(e){
+            timelineResize();
+        });
+        $(window).resize(function(e){
+            timelineResize();
+        });
+        timelineResize();
+    });
