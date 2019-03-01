@@ -1,5 +1,5 @@
 https://wp-kama.ru/id_9026/jquery-ajax-zagruzka-fajlov-na-server.html
-
+https://wp-kama.ru/function/media_handle_upload
 
 <input type="file" multiple="multiple" accept=".txt,image/*">
 <a href="#" class="upload_files button">Загрузить файлы</a>
