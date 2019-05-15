@@ -1,0 +1,5 @@
+if(window.navigator.userAgent.indexOf('Safari') >= 0 && window.navigator.userAgent.indexOf('Chrome') < 0){
+        	$('body').animate({scrollTop: top}, 1500);
+        }else{
+        	$('html,body').animate({scrollTop: top}, 1500);
+        }
